@@ -58,6 +58,7 @@ deploy-light-test: # This job runs in the deploy stage.
     - cd $SOURCE_FOLDER
     - eval "$UPDATE_VERSION_CMD"
     - zip -r ../$PLUGIN_LIGHT_ZIP *
+    - cd ..
     - cp $PLUGIN_LIGHT_ZIP $PLUGIN_LIGHT_LATEST
     - AWS_ACCESS_KEY_ID=$DEV_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$DEV_AWS_SECRET_ACCESS_KEY aws s3 cp ./ s3://plugin-light-test-$DEV_AWS_DEFAULT_REGION --recursive --exclude "*" --include "$PLUGIN_LIGHT_PRE*.zip" --acl public-read
   environment:
