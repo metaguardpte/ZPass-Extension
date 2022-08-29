@@ -1,0 +1,57 @@
+@import '../../../../../theme/theme.less';
+
+.hubVaultList{
+    background-color: var(--list-bg-color);
+    :global{
+        .ant-list-items{
+            .ant-list-item{
+                padding: 10px 10px;
+                border-radius: 5px;
+                margin: 10px 10px;
+
+                .ant-list-item-meta-title{
+                    margin: 0;
+                    line-height: 1.2;
+                }
+
+                .ant-list-item-meta-avatar{
+                    margin-right: 8px;
+                }
+
+                .ant-list-item-action-split{
+                    opacity: 0;
+                }
+
+                .ant-list-item-meta-description{
+                    line-height: 1.2;
+
+                    .ant-typography{
+                        color: #777;
+                    }
+                }
+
+                .ant-list-item-action{
+                    display: flex;
+                    align-items: center;
+                }
+
+                .anticon-more{
+                    height: 14px;
+                }
+            }
+            .ant-list-item:hover{
+                background-color: var(--list-hover-bg-color);
+                cursor: pointer;
+            }
+            .ant-btn:hover{
+                background-color: transparent;
+                color: var(--btn-hover-color);
+            }
+            .ant-btn{
+                background: transparent;
+                box-shadow: none;
+            }
+        }
+
+    }
+}
