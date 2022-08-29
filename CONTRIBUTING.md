@@ -21,6 +21,7 @@ The ZPass project is distributed across multiple repositories. Try to file the i
 -   [ZPass Server](https://github.com/metaguardpte/ZPass-Server/issues)
 -   [ZPass App](https://github.com/metaguardpte/ZPassApp/issues)
 -   [ZPass Extension](https://github.com/metaguardpte/ZPass-Extension/issues)
+-   [ZPass Native messaging host](https://github.com/metaguardpte/ZPass-Native-Messaging-Host/issues)
 
 ### Look For an Existing Issue
 
