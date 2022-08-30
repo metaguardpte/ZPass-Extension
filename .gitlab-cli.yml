@@ -20,12 +20,12 @@ stages: # List of stages for jobs, and their order of execution
 
 variables:
   PLUGIN_LIGHT_PRE: "zpass-light"
-  PLUGIN_LIGHT_ZIP: "$PLUGIN_LIGHT_PRE-$VERSTION_PREFIX.$CI_PIPELINE_IID.zip"
+  PLUGIN_LIGHT_ZIP: "$PLUGIN_LIGHT_PRE-$VERSION_PREFIX.$CI_PIPELINE_IID.zip"
   PLUGIN_LIGHT_LATEST: "$PLUGIN_LIGHT_PRE-latest.zip"
   SOURCE_FOLDER: "dist"
   LIGHT_PASSWORD_MANIFEST: "$SOURCE_FOLDER/manifest.json"
-  VERSTION_PREFIX: "1.4"
-  UPDATE_VERSION_CMD: 'jq ''.version = "$VERSTION_PREFIX.$CI_PIPELINE_IID"'' manifest.json|sponge manifest.json'
+  VERSION_PREFIX: "1.5"
+  UPDATE_VERSION_CMD: 'jq ''.version = "$VERSION_PREFIX.$CI_PIPELINE_IID"'' manifest.json|sponge manifest.json'
 
 build-job: # This job runs in the build stage, which runs first.
   stage: build
