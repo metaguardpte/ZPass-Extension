@@ -1,0 +1,35 @@
+@import '../../../../../theme/theme.less';
+
+.hubFormTitle{
+    text-align: center;
+    padding: 16px 0;
+}
+
+.input {
+    height: 30px;
+}
+
+.hubFormLoading {
+    background-color: var(--list-bg-color);
+    max-height: 1000px !important;
+    :global{
+        .ant-spin-dot{
+            top: 220px !important;
+        }
+    }
+}
+
+.actionIcon:hover {
+    color: var(--detail-input-title-color);
+}
+
+.inputSelect {
+    :global{
+        .ant-select-selector{
+            padding: 0 !important;
+        }
+        .ant-select-arrow{
+            display: none;
+        }
+    }
+}

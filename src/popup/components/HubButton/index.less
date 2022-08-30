@@ -1,0 +1,44 @@
+@primary-color-1: #4342ff;
+@primary-color-2: #5273fe;
+@selected-color: #40a9ff;
+
+.base {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.primary {
+    .base;
+    color: white;
+    background-image: linear-gradient(
+        to right,
+        @primary-color-2,
+        @primary-color-1
+    );
+}
+
+.primaryHover {
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.default {
+    .base;
+    color: @primary-color-2;
+    border: 1px solid @primary-color-2;
+}
+
+.defaultHover {
+    &:hover {
+        color: @selected-color !important;
+        border-color: @selected-color !important;
+    }
+}

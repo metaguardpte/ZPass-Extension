@@ -1,0 +1,143 @@
+@import "../../../theme/theme.less";
+
+.header {
+    height: 30px;
+    background-color: #4b5dfe;
+}
+
+.close {
+    float: right;
+    width: 16px;
+}
+
+.closeIicon {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.body {
+    padding: 10px 20px 20px 20px;
+    :global {
+        .ant-radio-wrapper,
+        .ant-checkbox-wrapper,
+        .ant-select {
+            font-size: 12px;
+        }
+
+        .ant-select-single.ant-select-sm:not(.ant-select-customize-input).ant-select-show-arrow
+            .ant-select-selection-item {
+            padding-right: 16px;
+        }
+
+        .ant-select-arrow {
+            right: 7px;
+        }
+    }
+}
+
+.optionContainer {
+    font-size: 12px;
+}
+
+.button {
+    height: 28px;
+    width: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    color: var(--btn-hover-color);
+    border: 1px solid var(--btn-hover-color);
+    border-radius: 14px;
+    cursor: pointer;
+    &:hover {
+        border: 2px solid var(--btn-hover-color);
+    }
+}
+
+.divider {
+    background-color: rgba(168, 168, 168, 0.5);
+    margin: 15px 0;
+}
+
+.input {
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    display: flex;
+    padding: 0 5px;
+    border-radius: 4px;
+    background-color: var(--input-bg-color);
+}
+
+.option {
+    font-size: 12px;
+}
+
+.inputNumber {
+    width: 60px;
+}
+
+.switchButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    &:hover {
+        border: 1px solid rgba(168, 168, 168, 0.5);
+        color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+.history {
+    .item {
+        width: 100%;
+        height: 78px;
+        border-radius: 6px;
+        padding: 2px 6px;
+
+        .action {
+            display: none;
+        }
+
+        &:hover {
+            background: rgba(128, 128, 128, 0.1);
+
+            .action {
+                display: inherit;
+            }
+        }
+    }
+
+    .list {
+        margin-top: 10px;
+        height: 365px;
+        overflow-y: auto;
+        margin-right: -10px;
+    }
+
+    .icon {
+        cursor: pointer;
+        font-size: 16px;
+        color: #acacac;
+
+        &:hover {
+            opacity: 1;
+            color: var(--btn-hover-color);
+        }
+    }
+
+    .deleteIcon {
+        .icon;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
