@@ -129,12 +129,6 @@ const HomeContent = (props: HomeContentProps) => {
             case 'credit':
                 ret = <span>{t('home.tab.title.credits')}</span>
                 break
-            case 'cryptoWallet':
-                ret = <span>{t('home.tab.title.cryptoWallet')}</span>
-                break
-            case 'cryptoAddress':
-                ret = <span>{t('home.tab.title.cryptoAddress')}</span>
-                break
             default:
                 break
         }
@@ -174,12 +168,6 @@ const HomeContent = (props: HomeContentProps) => {
                     onClick={(e) => onTypeChanged('credit')}
                 >
                     {t('home.tab.title.credits')}
-                </Menu.Item>
-                <Menu.Item
-                    key="allMenu-5"
-                    onClick={(e) => onTypeChanged('cryptoWallet')}
-                >
-                    {t('home.tab.title.cryptoWallet')}
                 </Menu.Item>
             </Menu>
         )
