@@ -1,0 +1,28 @@
+{
+    "presets": [
+        "@babel/preset-typescript",
+        [
+            "@babel/preset-env",
+            {
+                "targets": { "chrome": "80" }
+            }
+        ],
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        [
+            "import",
+            {
+                "libraryName": "@icon-park/react",
+                "libraryDirectory": "es/icons",
+                "camel2DashComponentName": false
+            }
+        ]
+    ]
+}
