@@ -40,6 +40,7 @@ declare type MsgType =
     | 'ExtensionHeartbeat'
     | 'CompanyDecryptFromExtension'
     | 'DecryptAndNotSendCompanyPasswordFromExtension'
+    | 'SetCopiedTextFromExtension'
 
 declare type CommonContentMsgType =
     | 'fillPage'
