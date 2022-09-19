@@ -198,3 +198,12 @@ export const deletePasswordHistoryAll = async () => {
     const ret = await appRequester.post(msg)
     return ret
 }
+
+export const setCopiedText = async (text: string) => {
+    const msg: Message.ExtensionsMessage = {
+        type: 'SetCopiedTextFromExtension',
+        message: { text: text },
+    }
+    const ret = await appRequester.post(msg)
+    return ret
+}
