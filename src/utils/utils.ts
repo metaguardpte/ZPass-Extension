@@ -133,9 +133,9 @@ const _default: Utils = {
         }
         return [title, subTitle, needTranslate]
     },
-    copyText: function (text: string): void {
+    copyText: async function (text: string): Promise<void> {
         if (document.hasFocus()) {
-            navigator.clipboard.writeText(text)
+            await navigator.clipboard.writeText(text)
             setCopiedText(text)
         }
     },

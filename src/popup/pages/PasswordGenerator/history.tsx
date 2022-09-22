@@ -66,7 +66,7 @@ const ListItem = (props: PropsType) => {
         if (!truePassword) {
             await decryptPassword()
         }
-        navigator.clipboard.writeText(truePassword)
+        await navigator.clipboard.writeText(truePassword)
         setCopiedText(truePassword)
     }
 

@@ -126,7 +126,7 @@ const Generate = (props: PropsItem) => {
     }
 
     const copyPassword = async () => {
-        navigator.clipboard.writeText(password)
+        await navigator.clipboard.writeText(password)
         setCopiedText(password)
         chrome.tabs.query(
             { currentWindow: true, active: true },
