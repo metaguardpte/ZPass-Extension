@@ -27,6 +27,7 @@ import {
     deletePasswordHistory,
     deletePasswordHistoryAll,
     decryptText,
+    setCopiedText,
 } from '@/services/api/appRequester'
 import store from '@/popup/store'
 import HubButton from '@/popup/components/HubButton'
@@ -65,7 +66,8 @@ const ListItem = (props: PropsType) => {
         if (!truePassword) {
             await decryptPassword()
         }
-        navigator.clipboard.writeText(truePassword)
+        await navigator.clipboard.writeText(truePassword)
+        setCopiedText(truePassword)
     }
 
     const visibleSwitch = async () => {

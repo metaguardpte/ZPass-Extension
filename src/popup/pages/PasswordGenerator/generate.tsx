@@ -20,7 +20,7 @@ import { SyncOutlined, HistoryOutlined, LeftOutlined } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import comm from '@/utils/communication'
-import { postPasswordHistory } from '@/services/api/appRequester'
+import { postPasswordHistory, setCopiedText } from '@/services/api/appRequester'
 import HubButton from '@/popup/components/HubButton'
 
 type PasswordType = 'char' | 'phrase'
@@ -126,7 +126,8 @@ const Generate = (props: PropsItem) => {
     }
 
     const copyPassword = async () => {
-        navigator.clipboard.writeText(password)
+        await navigator.clipboard.writeText(password)
+        setCopiedText(password)
         chrome.tabs.query(
             { currentWindow: true, active: true },
             function (tabInfo) {

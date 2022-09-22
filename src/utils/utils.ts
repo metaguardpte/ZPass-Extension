@@ -3,6 +3,7 @@ import moment from 'moment'
 import store from '@/popup/store'
 import { HOTP, TOTP, URI } from 'otpauth'
 import IconMap from '@/popup/pages/Home/components/IconMap'
+import { setCopiedText } from '@/services/api/appRequester'
 
 const dateTimeFormat = 'YYYY-MM-DD HH:mm:ss'
 
@@ -132,9 +133,10 @@ const _default: Utils = {
         }
         return [title, subTitle, needTranslate]
     },
-    copyText: function (text: string): void {
+    copyText: async function (text: string): Promise<void> {
         if (document.hasFocus()) {
-            navigator.clipboard.writeText(text)
+            await navigator.clipboard.writeText(text)
+            setCopiedText(text)
         }
     },
     log: function (message?: any, ...optionalParams: any[]): void {
